@@ -26,6 +26,13 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+nnoremap nt :NERDTreeToggle<CR>
+
 " which key mapping
 nnoremap <silent> \ :silent WhichKey '<Space>'<CR>
 vnoremap <silent> \ :silent <c-u> :silent WhichKeyVisual '<Space>'<CR>
+
+" Buffer Navigation
+nnoremap bj :bnext<CR>
+nnoremap bk :bNext<CR>
+nnoremap bc :bd<CR>

@@ -23,8 +23,19 @@ set cinkeys-=:
 " Enable the mouse
 set mouse=a
 
-set autochdir
+"set autochdir
 set clipboard=unnamedplus
+
+" all utf-8
+set encoding=utf-8
+set fileencoding=utf-8
+set termencoding=utf-8
 
 syntax on
 filetype indent plugin on 
+
+set updatetime=1000
+set completeopt=longest,menuone,preview
+  " Set desired preview window height for viewing documentation.
+set previewheight=5
+set termguicolors
