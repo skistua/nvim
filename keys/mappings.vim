@@ -27,6 +27,7 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 nnoremap nt :NERDTreeToggle<CR>
+nnoremap NT :NERDTreeFind<CR>
 
 " which key mapping
 nnoremap <silent> \ :silent WhichKey '<Space>'<CR>

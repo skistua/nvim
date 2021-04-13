@@ -8,5 +8,5 @@ source ~/AppData/local/nvim/keys/which-key.vim
 source ~/AppData/local/nvim/plug-config/start-screen.vim
 source ~/AppData/local/nvim/plug-config/coc.vim
 "source ~/AppData/local/nvim/plug-config/asyncomplete.vim
-"source ~/AppData/local/nvim/plug-config/omnisharp.vim
+source ~/AppData/local/nvim/plug-config/omnisharp.vim
 

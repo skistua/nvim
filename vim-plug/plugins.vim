@@ -12,6 +12,7 @@ Plug 'liuchengxu/vim-which-key'
 Plug 'ryanoasis/vim-devicons'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Plug 'prabirshrestha/asyncomplete.vim'
-"Plug 'OmniSharp/omnisharp-vim'
+Plug 'OmniSharp/omnisharp-vim'
+Plug 'dense-analysis/ale'
 call plug#end()
 
