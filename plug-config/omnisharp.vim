@@ -55,7 +55,6 @@ augroup omnisharp_commands
   autocmd FileType cs nmap <silent> <buffer> <Leader>gi <Plug>(omnisharp_preview_implementations)
   autocmd FileType cs nmap <silent> <buffer> K <Plug>(omnisharp_documentation)
   autocmd FileType cs nmap <silent> <buffer> gs <Plug>(omnisharp_find_symbol)
-  autocmd FileType cs nmap <silent> <buffer> gm <Plug>(omnisharp_find_members)
   "autocmd FileType cs nmap <silent> <buffer> <Leader>osfx <Plug>(omnisharp_fix_usings)
   autocmd FileType cs nmap <silent> <buffer> <C-\> <Plug>(omnisharp_signature_help)
   autocmd FileType cs imap <silent> <buffer> <C-\> <Plug>(omnisharp_signature_help)
