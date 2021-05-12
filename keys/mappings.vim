@@ -37,3 +37,6 @@ vnoremap <silent> \ :silent <c-u> :silent WhichKeyVisual '<Space>'<CR>
 nnoremap bj :bnext<CR>
 nnoremap bk :bNext<CR>
 nnoremap bc :bd<CR>
+
+" LeaderF
+nnoremap <C-p> :LeaderfCommand<CR>
