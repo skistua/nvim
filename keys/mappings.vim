@@ -34,9 +34,9 @@ nnoremap <silent> \ :silent WhichKey '<Space>'<CR>
 vnoremap <silent> \ :silent <c-u> :silent WhichKeyVisual '<Space>'<CR>
 
 " Buffer Navigation
-nnoremap bj :bnext<CR>
-nnoremap bk :bNext<CR>
-nnoremap bc :bd<CR>
+nnoremap <leader>l :bnext<CR>
+nnoremap <leader>h :bNext<CR>
+nnoremap <leader>c :bd<CR>
 
 " LeaderF
-nnoremap <C-p> :LeaderfCommand<CR>
+nnoremap <C-P> :LeaderfCommand<CR>
