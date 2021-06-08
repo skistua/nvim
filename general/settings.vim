@@ -33,6 +33,7 @@ set termencoding=utf-8
 
 syntax on
 filetype indent plugin on 
+filetype plugin on
 
 set updatetime=1000
 set completeopt=longest,menuone,preview
