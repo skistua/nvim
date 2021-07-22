@@ -51,36 +51,38 @@ endif
 
 " ===========================================  
 " Use K to show documentation in preview window.
-"nnoremap <silent> K :call <SID>show_documentation()<CR>
-"
-"function! s:show_documentation()
-  "if (index(['vim','help'], &filetype) >= 0)
-    "execute 'h '.expand('<cword>')
-  "else
-    "call CocAction('doHover')
-  "endif
-"endfunction
-"
-"" Highlight the symbol and its references when holding the cursor.
-"autocmd CursorHold * silent call CocActionAsync('highlight')
-"
-"" Formatting selected code.
-"nnoremap <silent> gf :call CocActionAsync('format')<CR>
-"
-"" Apply AutoFix to problem on the current line.
-"nnoremap <silent> ga :call CocActionAsync('doQuickfix')<CR>
-"
-"" Rename current symbol.
-"nnoremap <silent> gr :call CocActionAsync('rename')<CR>
-"
-"" Jump Definiation.
-"nnoremap <silent> gd :call CocActionAsync('jumpDefinition')<CR>
-"nnoremap <silent> g\ :call CocActionAsync('showSignatureHelp')<CR>
-"
-"augroup mygroup
-  "autocmd!
-  "" Setup formatexpr specified filetype(s).
-  "autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
-  "" Update signature help on jump placeholder.
-  "autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
-"augroup end
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+" Highlight the symbol and its references when holding the cursor.
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+" Formatting selected code.
+nnoremap <silent> gf :call CocActionAsync('format')<CR>
+
+" Apply AutoFix to problem on the current line.
+nnoremap <silent> ga :call CocActionAsync('doQuickfix')<CR>
+
+" Rename current symbol.
+nnoremap <silent> gr :call CocActionAsync('rename')<CR>
+
+" Jump Definiation.
+nnoremap <silent> gd :call CocActionAsync('jumpDefinition')<CR>
+nnoremap <silent> g\ :call CocActionAsync('showSignatureHelp')<CR>
+nnoremap <silent> gi :call CocActionAsync('jumpImplementation')<CR>
+nnoremap <silent> gu :call CocActionAsync('jumpReferences')<CR>
+
+augroup mygroup
+  autocmd!
+  " Setup formatexpr specified filetype(s).
+  autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
+  " Update signature help on jump placeholder.
+  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+augroup end

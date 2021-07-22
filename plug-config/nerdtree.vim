@@ -1,2 +1,2 @@
 
-let NERDTreeIgnore=['\.vim$', '\~$', '\.meta$', '\.projcs$', '\.sln$', '\.fbx$']
+let NERDTreeIgnore=['\.vim$', '\~$', '\.meta$', '\.csproj$', '\.sln$', '\.fbx$']

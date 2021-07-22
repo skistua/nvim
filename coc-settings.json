@@ -1,5 +1,4 @@
 {
     "coc.preferences.colorSupport": true,
-    "highlight.colors.enable": true,
-    "highlight.document.enable": true
+    "python.jediEnabled": false
 }
