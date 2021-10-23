@@ -13,10 +13,6 @@ nnoremap <M-k>    :resize +2<CR>
 nnoremap <M-h>    :vertical resize +2<CR>
 nnoremap <M-l>    :vertical resize -2<CR>
 
-" Use alt + jk to select completion
-inoremap <M-j> <C-n>
-inoremap <M-k> <C-p>
-
 " Redraw the screen and clear any search terms
 noremap <silent> <c-n> :nohls<cr><c-l>
 

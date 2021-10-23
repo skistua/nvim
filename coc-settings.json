@@ -1,4 +1,5 @@
 {
     "coc.preferences.colorSupport": true,
-    "python.jediEnabled": false
+    "python.jediEnabled": false,
+    "sql.database": "mysql"
 }
