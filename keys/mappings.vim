@@ -26,8 +26,8 @@ nnoremap nt :NERDTreeToggle<CR>
 nnoremap NT :NERDTreeFind<CR>
 
 " which key mapping
-nnoremap <silent> \ :silent WhichKey '<Space>'<CR>
-vnoremap <silent> \ :silent <c-u> :silent WhichKeyVisual '<Space>'<CR>
+"nnoremap <silent> \ :silent WhichKey '<Space>'<CR>
+"vnoremap <silent> \ :silent <c-u> :silent WhichKeyVisual '<Space>'<CR>
 
 " Buffer Navigation
 nnoremap <leader>l :bnext<CR>
@@ -35,4 +35,4 @@ nnoremap <leader>h :bNext<CR>
 nnoremap <leader>c :bd<CR>
 
 " LeaderF
-nnoremap <C-P> :LeaderfCommand<CR>
+"nnoremap <C-P> :LeaderfCommand<CR>
