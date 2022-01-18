@@ -27,6 +27,7 @@ Plug 'L3MON4D3/LuaSnip' " Snippets plugin
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
+Plug 'romgrk/nvim-treesitter-context'
 if has('macunix')
     Plug 'lyokha/vim-xkbswitch'
 else
