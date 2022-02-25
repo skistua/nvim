@@ -18,10 +18,27 @@ lua <<EOF
 
 require('telescope').setup({
     defaults = {
-        layout_config = {
-            center = { width = 0.7 },
+        layout_strategy = 'vertical',
+        layout_config = { height = 0.95 },
+        path_display = function(opts, path)
+            local tail = require("telescope.utils").path_tail(path)
+            return string.format("%s (%s)", tail, path)
+        end,
+        file_ignore_patterns = {"%.meta","%.asset","%.unity","%.mat","%.prefab"},
+        mappings = {
+            n = { 
+                    ['<c-d>'] = require('telescope.actions').delete_buffer 
+                }, -- n
+            i = {
+                    ["<C-h>"] = "which_key",
+                    ['<c-d>'] = require('telescope.actions').delete_buffer
+            } -- i
         },
     },
+    pickers = {
+        find_files = {
+            find_command = { "fd", "--type", "f", "--strip-cwd-prefix" }
+        }
+    }
 })
-
 EOF

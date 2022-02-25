@@ -11,6 +11,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'mhinz/vim-signify'
 "Plug 'liuchengxu/vim-which-key'
 Plug 'ryanoasis/vim-devicons'
+Plug 'kyazdani42/nvim-web-devicons'
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Plug 'OmniSharp/omnisharp-vim'
 "Plug 'dense-analysis/ale'
@@ -24,6 +25,7 @@ Plug 'hrsh7th/cmp-nvim-lsp' " LSP source for nvim-cmp
 Plug 'hrsh7th/cmp-buffer' "cmp buffer source
 Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'L3MON4D3/LuaSnip' " Snippets plugin
+Plug 'ray-x/lsp_signature.nvim' " lsp signature helper
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
