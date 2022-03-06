@@ -16,6 +16,7 @@ let g:OmniSharp_popup_options = {
 \}
 let g:OmniSharp_selector_ui = 'fzf'
 let g:OmniSharp_selector_findusages = 'fzf'
+let g:OmniSharp_selector_findmembers = 'fzf'
 
 let g:OmniSharp_diagnostic_exclude_paths = [
 \ 'obj\\',
@@ -72,6 +73,8 @@ augroup omnisharp_commands
   "autocmd FileType cs xmap <silent> <buffer> <Leader>os. <Plug>(omnisharp_code_action_repeat)
 
   autocmd FileType cs nmap <silent> <buffer> <Leader>== <Plug>(omnisharp_code_format)
+
+  autocmd FileType cs nmap <silent> <buffer> <Leader>r <Plug>(omnisharp_find_members)
 
   autocmd FileType cs nmap <silent> <buffer> gr <Plug>(omnisharp_rename)
 

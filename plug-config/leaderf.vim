@@ -22,6 +22,6 @@ let g:Lf_PreviewResult = {
 
 let g:Lf_RootMarkers = ['.project', '.project2', '.root']
 
-nnoremap <leader>r :LeaderfFunction<CR>
-nnoremap <leader>R :LeaderfFunctionAll<CR>
+"nnoremap <leader>r :LeaderfFunction<CR>
+"nnoremap <leader>R :LeaderfFunctionAll<CR>
 
