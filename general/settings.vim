@@ -41,6 +41,8 @@ set completeopt=longest,menuone,preview
 set previewheight=5
 set termguicolors
 
+let g:python3_host_prog = '~/.config/nvimvenv/Scripts/python.exe'
+
 if has('win32')
     let &shell = 'powershell'
     let &shellcmdflag = '-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.Encoding]::UTF8;'
