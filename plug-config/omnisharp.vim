@@ -3,6 +3,7 @@
 " Use Roslyin and also better performance than HTTP
 let g:OmniSharp_server_stdio = 1
 let g:omnicomplete_fetch_full_documentation = 0
+let g:OmniSharp_server_use_net6 = 1
 
 " Timeout in seconds to wait for a response from the server
 let g:OmniSharp_timeout = 30
