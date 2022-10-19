@@ -1,5 +1,10 @@
 {
-    "coc.preferences.colorSupport": true,
-    "python.jediEnabled": false,
-    "sql.database": "mysql"
+    "sql.database": "mysql",
+    "languageserver":{
+        "csharp-ls":{
+            "command": "csharp-ls",
+            "filetypes" : ["cs"],
+            "rootPatterns":["*.sln","*.csproj",".vim/",".git/", ".hg/"]
+        }
+    }
 }

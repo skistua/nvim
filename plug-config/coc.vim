@@ -68,7 +68,7 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 nnoremap <silent> gf :call CocActionAsync('format')<CR>
 
 " Apply AutoFix to problem on the current line.
-nnoremap <silent> ga :call CocActionAsync('doQuickfix')<CR>
+"nnoremap <silent> ga :call CocActionAsync('doQuickfix')<CR>
 
 " Rename current symbol.
 nnoremap <silent> gr :call CocActionAsync('rename')<CR>
@@ -76,8 +76,8 @@ nnoremap <silent> gr :call CocActionAsync('rename')<CR>
 " Jump Definiation.
 nnoremap <silent> gd :call CocActionAsync('jumpDefinition')<CR>
 nnoremap <silent> g\ :call CocActionAsync('showSignatureHelp')<CR>
-nnoremap <silent> gi :call CocActionAsync('jumpImplementation')<CR>
-nnoremap <silent> gu :call CocActionAsync('jumpReferences')<CR>
+"noremap <silent> gi :call CocActionAsync('jumpImplementation')<CR>
+"nnoremap <silent> gu :call CocActionAsync('jumpReferences')<CR>
 
 augroup mygroup
   autocmd!

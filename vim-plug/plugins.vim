@@ -12,19 +12,12 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'tpope/vim-surround'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'ferrine/md-img-paste.vim'
-Plug 'neovim/nvim-lspconfig'
-Plug 'hrsh7th/nvim-cmp' " Autocompletion plugin
-Plug 'williamboman/nvim-lsp-installer' "Auto Lang Server Installer
-Plug 'hrsh7th/cmp-nvim-lsp' " LSP source for nvim-cmp
-Plug 'hrsh7th/cmp-buffer' "cmp buffer source
-Plug 'hrsh7th/cmp-nvim-lsp-signature-help' "signature help
-Plug 'hrsh7th/cmp-path' "path cmp help
-Plug 'saadparwaiz1/cmp_luasnip'
-Plug 'L3MON4D3/LuaSnip' " Snippets plugin
-Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'fannheyward/telescope-coc.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 Plug 'romgrk/nvim-treesitter-context'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 if has('macunix')
     Plug 'lyokha/vim-xkbswitch'
 else
@@ -41,7 +34,8 @@ if has('win32')
     source ~/AppData/local/nvim/plug-config/markdown.vim
     source ~/AppData/local/nvim/plug-config/ims.vim
     source ~/AppData/local/nvim/plug-config/telescope.vim
-    lua require('lsp')
+    source ~/AppData/local/nvim/plug-config/coc.vim
+    lua require('TS-setting')
 else
     source ~/.config/nvim/themes/gruvbox.vim
     source ~/.config/nvim/themes/airline.vim
@@ -50,5 +44,6 @@ else
     source ~/.config/nvim/plug-config/markdown.vim
     source ~/.config/nvim/plug-config/ims.vim
     source ~/.config/nvim/plug-config/telescope.vim
-    lua require('lsp')
+    source ~/.config/nvim/plug-config/coc.vim
+    lua require('TS-setting')
 endif

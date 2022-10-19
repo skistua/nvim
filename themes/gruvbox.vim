@@ -1,5 +1,9 @@
 
 set t_Co=256
+" Set background transparent
+"highlight Normal ctermbg=NONE guibg=NONE
+autocmd vimenter * highlight Normal guibg=NONE ctermbg=NONE
+let g:gruvbox_transparent_bg=1
 let g:airline_theme='gruvbox'
 
 if exists('+termguicolors')
