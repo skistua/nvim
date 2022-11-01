@@ -5,7 +5,6 @@ nnoremap <leader>b <cmd>Telescope buffers<cr>
 nnoremap <leader><leader>h <cmd>Telescope help_tags<cr>
 nnoremap <C-P> <cmd>Telescope commands<cr>
 nnoremap <M-r> <cmd>Telescope registers<cr>
-nnoremap <leader>R <cmd>Telescope treesitter<cr>
 
 "nnoremap <leader>e <cmd>Telescope diagnostics<cr>
 nnoremap <leader>e <cmd>Telescope coc diagnostics<cr>
@@ -26,7 +25,8 @@ nnoremap gD <cmd>Telescope coc type_definitions<cr>
 nnoremap gu <cmd>Telescope coc references<cr>
 
 "nnoremap <leader>r <cmd>Telescope lsp_document_symbols<cr>
-nnoremap <leader>r <cmd>Telescope coc document_symbols<cr>
+nnoremap <leader>R <cmd>Telescope coc document_symbols<cr>
+nnoremap <leader>r <cmd>Telescope treesitter<cr>
 
 lua <<EOF
 
@@ -38,7 +38,7 @@ require('telescope').setup({
         --    local tail = require("telescope.utils").path_tail(path)
         --    return string.format("%s (%s)", tail, path)
         --end,
-        path_display = {"truncate"},
+        path_display ={"truncate"},
         file_ignore_patterns = {"%.meta","%.asset","%.unity","%.mat","%.prefab"},
         mappings = {
             n = { 
@@ -59,7 +59,7 @@ require('telescope').setup({
     extensions = {
         coc = {
             -- theme = 'ivy',
-            prefer_locations = true, -- always use Telescope locations to preview definitions/declarations/implementations etc
+            prefer_locations = true -- always use Telescope locations to preview definitions/declarations/implementations etc
         }
     },
 })
