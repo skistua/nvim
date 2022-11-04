@@ -1,11 +1,12 @@
 
 syntax enable
 set nowrap
-set noswapfile
 set number 
 set relativenumber
 set splitbelow
 set splitright
+set undofile
+set undolevels=3000
 set noshowmode
 set incsearch
 set wildmenu
