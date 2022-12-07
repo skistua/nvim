@@ -16,7 +16,8 @@ Plug 'OmniSharp/omnisharp-vim'
 Plug 'dense-analysis/ale'
 Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 Plug 'tpope/vim-surround'
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+"Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 Plug 'ferrine/md-img-paste.vim'
 if has('macunix')
     Plug 'lyokha/vim-xkbswitch'
