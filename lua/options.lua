@@ -1,46 +1,48 @@
+
+vim.cmd('syntax enable')
+
+local o = vim.o
+local g = vim.g
+local opt = vim.opt
+
+o.wrap = false
+o.swapfile = false
+o.number = true
+o.relativenumber = true
+o.splitbelow = true
+o.splitright = true
+o.showmode = false
+o.incsearch = true
+o.wildmenu = true
+g.mapleader = ' '
+
+o.updatetime = 1000
+o.timeoutlen = 200
+o.completeopt = 'longest,menuone,preview'
+
+-- Indent
+opt.expandtab = true
+opt.tabstop = 4
+opt.shiftwidth = 4
+
+-- Enable the mouse
+o.mouse = 'a'
+
+-- set autochdir
+opt.clipboard = 'unnamedplus'
+
+-- all utf-8
+opt.encoding = 'utf-8'
+opt.fileencoding = 'utf-8'
+opt.termencoding = 'utf-8'
+
 vim.cmd [[
-
-syntax enable
-set nowrap
-set noswapfile
-set number 
-set relativenumber
-set splitbelow
-set splitright
-set noshowmode
-set incsearch
-set wildmenu
-let mapleader="\<space>"
-
-set updatetime=300
-set timeoutlen=200
-
-" Indent
-set expandtab
-set tabstop=4
-set shiftwidth=4
-set cinkeys-=:
-
-" Enable the mouse
-set mouse=a
-
-"set autochdir
-set clipboard=unnamedplus
-
-" all utf-8
-set encoding=utf-8
-set fileencoding=utf-8
-set termencoding=utf-8
-
 syntax on
 filetype indent plugin on 
 filetype plugin on
-
-set updatetime=1000
-set completeopt=longest,menuone,preview
-
-" Set desired preview window height for viewing documentation.
-set previewheight=5
-set termguicolors
-
 ]]
+
+-- Set desired preview window height for viewing documentation.
+opt.previewheight=5
+opt.termguicolors = true
+
