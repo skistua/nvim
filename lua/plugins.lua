@@ -18,7 +18,6 @@ return require('packer').startup(function(use)
   -- Theme
   use 'morhetz/gruvbox'
   use 'kyazdani42/nvim-web-devicons'
-  
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons'},
@@ -45,7 +44,7 @@ return require('packer').startup(function(use)
   use {
 	"windwp/nvim-autopairs",
     config = function() require("nvim-autopairs").setup {} end
-  }  
+  }
   use 'tpope/vim-surround'
 
   if vim.fn.has('win32') == 1 then
@@ -68,7 +67,23 @@ return require('packer').startup(function(use)
   use 'ferrine/md-img-paste.vim'
 
 -- LSP
---
+ use {
+   "williamboman/mason.nvim",
+   "williamboman/mason-lspconfig.nvim",
+   "neovim/nvim-lspconfig",
+ }
+
+-- Autocompletion
+ use {
+  'neovim/nvim-lspconfig',
+  'hrsh7th/cmp-nvim-lsp',
+  'hrsh7th/cmp-buffer',
+  'hrsh7th/cmp-path',
+  'hrsh7th/cmp-cmdline',
+  'hrsh7th/nvim-cmp',
+  'hrsh7th/cmp-vsnip',
+  'hrsh7th/vim-vsnip'
+ }
 
 -- TreeSitter
 
