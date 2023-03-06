@@ -76,6 +76,7 @@ return require('packer').startup(function(use)
 -- Autocompletion
  use {
   'hrsh7th/cmp-nvim-lsp',
+  'hrsh7th/cmp-nvim-lsp-signature-help',
   'hrsh7th/cmp-buffer',
   'hrsh7th/cmp-path',
   'hrsh7th/cmp-cmdline',
@@ -85,6 +86,13 @@ return require('packer').startup(function(use)
  }
 
 -- TreeSitter
+  use {
+      'nvim-treesitter/nvim-treesitter',
+      run = function()
+          local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+          ts_update()
+      end,
+  }
 
   if packer_bootstrap then
     require('packer').sync()
