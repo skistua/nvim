@@ -71,6 +71,7 @@ return require('packer').startup(function(use)
    "williamboman/mason.nvim",
    "williamboman/mason-lspconfig.nvim",
    "neovim/nvim-lspconfig",
+   "Hoffs/omnisharp-extended-lsp.nvim"
  }
 
 -- Autocompletion
@@ -82,7 +83,7 @@ return require('packer').startup(function(use)
   'hrsh7th/cmp-cmdline',
   'hrsh7th/nvim-cmp',
   'hrsh7th/cmp-vsnip',
-  'hrsh7th/vim-vsnip'
+  'hrsh7th/vim-vsnip',
  }
 
 -- TreeSitter
@@ -92,6 +93,7 @@ return require('packer').startup(function(use)
           local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
           ts_update()
       end,
+      config = function() require('plugin_settings.treesitter') end
   }
 
 -- Fuzzy Find

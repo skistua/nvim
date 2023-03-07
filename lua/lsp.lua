@@ -6,7 +6,7 @@ local on_attach = function(client, bufnr)
     local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
 
     -- Mappings.
-    local opts = { noremap=true, silent=false }
+    local opts = { noremap = true, silent = false }
 
     buf_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
     buf_set_keymap('n', 'g\\', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
@@ -30,10 +30,17 @@ end
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 require("mason-lspconfig").setup_handlers {
-    function (server_name) -- default handler (optional)
+    function(server_name)  -- default handler (optional)
         require("lspconfig")[server_name].setup {
-                on_attach = on_attach,
-                capabilities = capabilities
+            on_attach = on_attach,
+            capabilities = capabilities
+        }
+    end,
+        ['omnisharp'] = function()
+        require("lspconfig").omnisharp.setup {
+            handlers = {
+                    ["textDocument/definition"] = require('omnisharp_extended').handler,
+            }
         }
     end
 }
