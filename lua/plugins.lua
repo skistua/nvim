@@ -94,6 +94,14 @@ return require('packer').startup(function(use)
       end,
   }
 
+-- Fuzzy Find
+  use {
+    'nvim-telescope/telescope.nvim', tag = '0.1.1',
+    requires = { {'nvim-lua/plenary.nvim'} },
+    config = function() require('plugin_settings.telescope') end
+
+  }
+
   if packer_bootstrap then
     require('packer').sync()
   end

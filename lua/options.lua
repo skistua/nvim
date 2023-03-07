@@ -46,3 +46,9 @@ filetype plugin on
 opt.previewheight=5
 opt.termguicolors = true
 
+if vim.fn.has('win32') == 1 then
+    g.python3_host_prog = '~/.config/nvimvenv/Scripts/python.exe'
+else
+    g.python3_host_prog = '~/.config/nvimvenv/bin/python'
+end
+
