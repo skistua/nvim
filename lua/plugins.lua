@@ -32,7 +32,12 @@ return require('packer').startup(function(use)
 
   -- Navigation
   use 'easymotion/vim-easymotion'
-  use 'mhinz/vim-startify'
+  use {
+    'mhinz/vim-startify',
+    config = function()
+        vim.g.startify_change_to_dir = 0
+    end
+  }
   use {
     'nvim-tree/nvim-tree.lua',
     requires = { 'nvim-tree/nvim-web-devicons' },
@@ -46,6 +51,11 @@ return require('packer').startup(function(use)
     config = function() require("nvim-autopairs").setup {} end
   }
   use 'tpope/vim-surround'
+  use { 'lukas-reineke/indent-blankline.nvim',
+    config = function()
+        require('plugin_settings.blankline')
+    end
+  }
 
   if vim.fn.has('win32') == 1 then
     use {'Neur1n/neuims', opt = true, cmd = 'IMSToggle'}
@@ -89,6 +99,7 @@ return require('packer').startup(function(use)
 -- TreeSitter
   use {
       'nvim-treesitter/nvim-treesitter',
+      'nvim-treesitter/nvim-treesitter-context',
       run = function()
           local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
           ts_update()

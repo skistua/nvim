@@ -47,3 +47,4 @@ vim.wo.foldmethod = 'expr'
 vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
 -- no folding default
 vim.wo.foldlevel = 99
+
