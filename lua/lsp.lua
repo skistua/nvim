@@ -40,7 +40,8 @@ require("mason-lspconfig").setup_handlers {
         require("lspconfig").omnisharp.setup {
             handlers = {
                     ["textDocument/definition"] = require('omnisharp_extended').handler,
-            }
+            },
+            on_attach = on_attach
         }
     end
 }
