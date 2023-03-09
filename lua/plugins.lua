@@ -23,6 +23,15 @@ return require('packer').startup(function(use)
     requires = { 'kyazdani42/nvim-web-devicons'},
     config = function() require('plugin_settings.lualine') end
   }
+  use {
+      'xiyaowong/nvim-transparent',
+      config = function()
+          require("transparent").setup({
+              enable = true, -- boolean: enable transparent
+              ignore_linked_group = true, -- boolean: don't clear a group that links to another group
+          })
+      end
+  }
 
   use {
     'kdheepak/tabline.nvim',
