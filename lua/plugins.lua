@@ -108,13 +108,13 @@ return require('packer').startup(function(use)
 -- TreeSitter
   use {
       'nvim-treesitter/nvim-treesitter',
-      'nvim-treesitter/nvim-treesitter-context',
       run = function()
           local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
           ts_update()
-      end,
-      config = function() require('plugin_settings.treesitter') end
+      end
   }
+
+  use 'nvim-treesitter/nvim-treesitter-context'
 
 -- Fuzzy Find
   use {
