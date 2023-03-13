@@ -1,5 +1,5 @@
 require'FTerm'.setup({
-    cmd = {'bash'},
+    cmd = {'zsh'},
     border = 'double',
     dimensions  = {
         height = 0.9,
