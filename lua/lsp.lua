@@ -108,7 +108,7 @@ require("mason-lspconfig").setup_handlers {
             on_attach = function(clien,bufnr)
                 base_on_attach(clien,bufnr)
                 vim.api.nvim_buf_set_keymap(bufnr,'n','gd'
-                    ,'<cmd> lua require("csharp_ls_extended").telescope_lsp_definitions()<CR>'
+                    ,'<cmd> lua require("csharpls_extended").lsp_definitions()<CR>'
                     ,{ noremap = true, silent = true })
             end
         }
