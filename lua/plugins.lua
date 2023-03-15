@@ -52,6 +52,9 @@ return require('packer').startup(function(use)
     requires = { 'nvim-tree/nvim-web-devicons' },
     config = function() require('plugin_settings.nvimtree') end
   }
+  use { 'simrat39/symbols-outline.nvim',
+    config = function() require('symbols-outline').setup() end
+  }
 
   -- Life Saver
   use 'preservim/nerdcommenter'
