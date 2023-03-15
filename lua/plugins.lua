@@ -90,7 +90,8 @@ return require('packer').startup(function(use)
    "williamboman/mason.nvim",
    "williamboman/mason-lspconfig.nvim",
    "neovim/nvim-lspconfig",
-   "Hoffs/omnisharp-extended-lsp.nvim"
+   "Hoffs/omnisharp-extended-lsp.nvim",
+   "Decodetalkers/csharpls-extended-lsp.nvim"
  }
 
 -- Autocompletion

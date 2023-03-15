@@ -40,7 +40,7 @@ require('telescope').setup({
 
 local map = vim.keymap.set
 local builtin = require('telescope.builtin')
-local option = { noremap = true, silent = true }
+local option = { noremap = true, silent = false }
 
 map('n', '<leader>f', builtin.find_files, option)
 map('n', '<leader>g', builtin.live_grep, option)
@@ -53,6 +53,4 @@ map('n', '<leader>r', builtin.lsp_document_symbols, option)
 map('n', '<leader>R', builtin.treesitter, option)
 map('n', '<leader>e', builtin.diagnostics, option)
 map('n', 'gi', builtin.lsp_implementations, option)
-map('n', 'gd', builtin.lsp_definitions, option)
 map('n', 'gD', builtin.lsp_type_definitions, option)
-map('n', 'gd', require('omnisharp_extended').telescope_lsp_definitions, option)

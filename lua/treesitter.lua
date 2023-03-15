@@ -2,7 +2,7 @@
 
 require'nvim-treesitter.configs'.setup {
     -- Modules and its options go here
-    highlight = { 
+    highlight = {
         enable = true ,
         additional_vim_regex_highlighting = false,
     },
