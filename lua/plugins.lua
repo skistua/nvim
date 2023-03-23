@@ -26,10 +26,7 @@ return require('packer').startup(function(use)
   use {
       'xiyaowong/nvim-transparent',
       config = function()
-          require("transparent").setup({
-              enable = true, -- boolean: enable transparent
-              ignore_linked_group = true, -- boolean: don't clear a group that links to another group
-          })
+          require("transparent").setup()
       end
   }
 
