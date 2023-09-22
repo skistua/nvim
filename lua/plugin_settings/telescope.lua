@@ -31,11 +31,11 @@ require('telescope').setup({
           "--trim" -- add this value
         }
     },
-    --pickers = {
-        --find_files = {
-            --find_command = { "fd", "-t", "f"}
-        --}
-    --}
+    pickers = {
+        find_files = {
+            find_command = { "fd", "-It", "f", "--strip-cwd-prefix", "-E", ".git"}
+        }
+    }
 })
 
 local map = vim.keymap.set
