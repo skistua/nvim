@@ -100,10 +100,17 @@ require("mason-lspconfig").setup_handlers {
         }
     end,
     ['csharp_ls'] = function()
-        require("lspconfig").csharp_ls.setup {
+        local lspconfig = require("lspconfig")
+        lspconfig.csharp_ls.setup {
             handlers = {
                 ["textDocument/definition"] = require('csharpls_extended').handler
             },
+            root_dir = function(startpath)
+                return lspconfig.util.root_pattern("*.sln")(startpath)
+                    or lspconfig.util.root_pattern("*.csproj")(startpath)
+                    or lspconfig.util.root_pattern("*.fsproj")(startpath)
+                    or lspconfig.util.root_pattern(".git")(startpath)
+            end,
             --on_attach = on_attach
             on_attach = function(clien,bufnr)
                 base_on_attach(clien,bufnr)
