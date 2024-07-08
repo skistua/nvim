@@ -52,3 +52,10 @@ else
     g.python3_host_prog = '~/.config/nvimvenv/bin/python'
 end
 
+-- Define an autocommand group for HLSL filetype detection
+vim.api.nvim_exec([[
+  augroup hlsl
+    autocmd!
+    autocmd BufRead,BufNewFile *.hlsl set filetype=hlsl
+  augroup END
+]], false)

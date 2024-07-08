@@ -129,7 +129,7 @@ return require('packer').startup(function(use)
   use {"numToStr/FTerm.nvim",
     config = function() require('plugin_settings.FTerm') end
   }
-  
+
   use {
       'Exafunction/codeium.vim',
       config = function ()

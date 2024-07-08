@@ -5,10 +5,11 @@ require('telescope').setup({
     defaults = {
         layout_strategy = 'vertical',
         layout_config = { height = 0.95 },
-        path_display = function(opts, path)
-            local tail = require("telescope.utils").path_tail(path)
-            return string.format("%s (%s)", tail, path)
-        end,
+        --path_display = function(opts, path)
+            --local tail = require("telescope.utils").path_tail(path)
+            --return string.format("%s (%s)", tail, path)
+        --end,
+        path_display = { shorten = 2 },
         file_ignore_patterns = {"%.meta","%.asset","%.unity","%.mat","%.prefab"},
         mappings = {
             n = {
@@ -33,7 +34,7 @@ require('telescope').setup({
     },
     pickers = {
         find_files = {
-            find_command = { "fd", "-It", "f", "--strip-cwd-prefix", "-E", ".git"}
+            find_command = { "fd", "-t", "f", "--strip-cwd-prefix", "-E", ".git"}
         }
     }
 })

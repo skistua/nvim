@@ -29,3 +29,5 @@ map('n', '<M-l>', ':vertical resize -2<CR>', option)
 map('n', '<leader>l', ':bnext<CR>', option)
 map('n', '<leader>h', ':bNext<CR>', option)
 map('n', '<leader>c', ':bd<CR>', option)
+
+map('i', 'jk', '<ESC>', option)
