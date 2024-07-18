@@ -1,5 +1,4 @@
 require'FTerm'.setup({
-    cmd = {'bash'},
     border = 'double',
     dimensions  = {
         height = 0.9,
@@ -9,3 +8,6 @@ require'FTerm'.setup({
 
 vim.keymap.set('n', '<A-i>', '<CMD>lua require("FTerm").toggle()<CR>')
 vim.keymap.set('t', '<A-i>', '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>')
+vim.keymap.set('n', '<M-i>', '<CMD>lua require("FTerm").toggle()<CR>')
+vim.keymap.set('t', '<M-i>', '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>')
+

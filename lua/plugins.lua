@@ -16,7 +16,9 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
   -- Theme
-  use 'morhetz/gruvbox'
+  -- use {'morhetz/gruvbox'}
+  use { "ellisonleao/gruvbox.nvim" }
+  use { "folke/tokyonight.nvim" }
   use 'kyazdani42/nvim-web-devicons'
   use {
     'nvim-lualine/lualine.nvim',

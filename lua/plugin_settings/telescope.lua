@@ -34,7 +34,7 @@ require('telescope').setup({
     },
     pickers = {
         find_files = {
-            find_command = { "fd", "-t", "f", "--strip-cwd-prefix", "-E", ".git"}
+            find_command = { "fd", "-it", "f", "--strip-cwd-prefix", "-E", ".git"}
         }
     }
 })

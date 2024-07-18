@@ -34,7 +34,10 @@ opt.clipboard = 'unnamedplus'
 -- all utf-8
 opt.encoding = 'utf-8'
 opt.fileencoding = 'utf-8'
-opt.termencoding = 'utf-8'
+--opt.termencoding = 'utf-8'
+
+-- background
+opt.background = 'dark'
 
 vim.cmd [[
 syntax on
@@ -51,6 +54,7 @@ if vim.fn.has('win32') == 1 then
 else
     g.python3_host_prog = '~/.config/nvimvenv/bin/python'
 end
+
 
 -- Define an autocommand group for HLSL filetype detection
 vim.api.nvim_exec([[
